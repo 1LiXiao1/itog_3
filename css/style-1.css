@@ -1,0 +1,247 @@
+* {
+    margin:0;
+    padding:0;
+    font-family: 'Arvo';
+  }
+
+  body{
+    background-color: #E63946;
+  }
+  
+  .main{
+    height:100vh;
+    width:100%;  
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+  }
+  h1{
+    text-align:center;
+    text-transform: uppercase;
+    color: #F1FAEE; 
+    font-size: 4rem;
+  }
+  
+  .roller{
+    height: 4.125rem;
+    line-height: 4rem;
+    position: relative;
+    overflow: hidden; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    color: #2bb4ad;
+  }
+  
+  
+  #spare-time{
+    font-size: 1rem;
+    font-style: italic;
+    letter-spacing: 1rem;
+    margin-top: 0;
+    color: #95babb;
+    
+  }
+  
+  .roller #rolltext {
+    position: absolute;
+    top: 0;
+    animation: slide 5s infinite;  
+  }
+  
+  @keyframes slide {
+    0%{
+      top:0;
+    }
+    25%{
+      top: -4rem;    
+    }
+    50%{
+      top: -8rem;
+    }
+    72.5%{
+      top: -12.25rem;
+    }
+  }
+  
+  @media screen and (max-width: 600px){
+    h1{
+    text-align:center;
+    text-transform: uppercase;
+    color: #F1FAEE; 
+    font-size: 2.125rem;
+  }
+    
+    .roller{
+    height: 2.6rem; 
+    line-height: 2.125rem;  
+    }
+    
+    #spare-time {
+      font-size: 1rem;
+      letter-spacing: 0.1rem;
+    }
+    
+    .roller #rolltext {  
+    animation: slide-mob 5s infinite;  
+  }
+    
+    @keyframes slide-mob {
+    0%{
+      top:0;
+    }
+    25%{
+      top: -2.125rem;    
+    }
+    50%{
+      top: -4.25rem;
+    }
+    72.5%{
+      top: -6.375rem;
+    }
+  }
+  }
+  .ag-format-container {
+    width: 1142px;
+    margin: 0 auto;
+  }
+  
+  /*Кнопка начать играть*/
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    background: #001219;
+    overflow: hidden;
+  }
+  
+  .circle {
+    position: absolute;
+    bottom: 0;
+    width: 20px;
+    aspect-ratio: 1/1;
+    background: #fca311;
+    box-shadow: 0 0 10px #ff5400, 0 0 20px #ff5400, 0 0 30px #ff5400,
+      0 0 50px #ff5400;
+    border-radius: 50%;
+    animation: animate 5s linear forwards;
+  }
+  
+  @keyframes animate {
+    0% {
+      transform: translatey(0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translatey(-100vh);
+      opacity: 1;
+    }
+  }
+  
+  .circle::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 25%;
+    width: 50%;
+    height: 100vh;
+    opacity: 0.5s;
+    background: linear-gradient(#ff5400, transparent);
+  }
+  
+
+
+
+  @import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
+
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-family: 'Open Sans Condensed', sans-serif;
+  }
+  
+  div[class*=box] {
+    height: 33.33%;
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .btn {
+    line-height: 100px;
+    height: 100px;
+    text-align: center;
+    width: 500px;
+    cursor: pointer;
+  }
+  
+  /* 
+========================
+      BUTTON TWO
+========================
+*/
+.btn-two {
+    color: #FFF;
+    transition: all 0.5s;
+    position: relative; 
+  }
+  .btn-two span {
+    z-index: 2; 
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%; 
+  }
+  .btn-two::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.5s;
+    border: 1px solid rgba(255,255,255,0.2);
+    background-color: rgba(255,255,255,0.1);
+  }
+  .btn-two::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.5s;
+    border: 1px solid rgba(255,255,255,0.2);
+    background-color: rgba(255,255,255,0.1);
+  }
+  .btn-two:hover::before {
+    transform: rotate(-45deg);
+    background-color: rgba(255,255,255,0);
+  }
+  .btn-two:hover::after {
+    transform: rotate(45deg);
+    background-color: rgba(255,255,255,0);
+  }
+  
+  
